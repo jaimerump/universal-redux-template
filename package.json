@@ -15,7 +15,6 @@
     "postinstall": "npm run build"
   },
   "engines": {
-    "node": "6.1.0",
     "npm": "3.8.6"
   },
   "repository": {
@@ -49,7 +48,6 @@
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "history": "^1.17.0",
-    "humps": "^0.6.0",
     "immutable": "^3.8.1",
     "lodash": "^3.10.1",
     "node-sass": "^3.4.2",

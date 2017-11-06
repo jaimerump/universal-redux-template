@@ -2,7 +2,6 @@ import nock from 'nock'
 import apiMiddleware, { CALL_API, CHAIN_API } from 'middleware/api'
 import config from 'config'
 import superagent from 'superagent'
-import { camelizeKeys } from 'humps'
 
 describe('Middleware::Api', function(){
   let store, next
@@ -107,9 +106,9 @@ describe('Middleware::Api', function(){
         let promise = apiMiddleware(store)(next)(action)
         promise.then(()=> {
           expect(store.dispatch).to.have.been
-            .calledWith({ type: successType1, response: camelizeKeys(response1), extra1: 'val1' })
+            .calledWith({ type: successType1, response: response1, extra1: 'val1' })
           expect(store.dispatch).to.have.been
-            .calledWith({ type: successType2, response: camelizeKeys(response2), extra2: 'val2' })
+            .calledWith({ type: successType2, response: response2, extra2: 'val2' })
           done()
         })
       })
@@ -134,7 +133,7 @@ describe('Middleware::Api', function(){
           expect(store.dispatch).to.have.been.calledWith({
             extra1: 'val1',
             type: successType1,
-            response: camelizeKeys(response1)
+            response: response1
           })
           expect(afterSuccess1).to.have.been.calledWith({ getState: store.getState })
           done()
