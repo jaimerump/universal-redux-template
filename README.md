@@ -40,6 +40,7 @@ eg: `$ ./bin/generate component myNamespace/MyComponent`
 - Use [Immutable](https://facebook.github.io/immutable-js/) as store data
 - Hot Reload on client side by Webpack
 - Hot Reload on server side ([ref](https://medium.com/@kevinsimper/dont-use-nodemon-there-are-better-ways-fc016b50b45e))
+- No [humps](https://github.com/domchristie/humps)
 
 ## Stack:
 - [react](https://github.com/facebook/react)@15.4.2
