@@ -19,7 +19,6 @@ var config = {
       'react-dom',
       'lodash',
       'bluebird',
-      'humps',
       'history'
     ]
   },
